@@ -1,9 +1,12 @@
 <h1>ExpNo 2 : Implement Depth First Search Traversal of a Graph</h1> 
-<h3>Name: M.Pavithra</h3>
-<h3>Register Number:212222100032</h3>
-<H3>Aim:</H3>
+<h3>NAME: ABRIN NISHA A</h3>
+<h3>REG NO : 212222230005</h3>
+<H3>Aim :</H3>
+
 <p> To Implement Depth First Search Traversal of a Graph using Python 3.</p>
-<h3>Theory:</h3>
+
+<h3>Theory :</h3>
+
 <strong>Depth First Traversal </strong>(or DFS) for a graph is like Depth First Traversal of a tree. The only catch here is that, unlike trees, graphs may contain cycles (a node may be visited twice). Use a Boolean visited array to avoid processing a node more than once. A graph can have more than one DFS traversal. 
 Depth-first search is an algorithm for traversing or searching trees or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.
 Step 1: Initially, stack and visited arrays are empty.
@@ -53,36 +56,9 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
  <li>Find its Successors Or neighbors and Check whether the node is visited or not</li>
  <li>If Not Visited, add it to the STACK. Else Call The Function Again Until No more nodes needs to be visited.</li>
 </ol></B>
+
 <hr>
-<h3>PRROGRAM</h3>
-<hr>
-from collections import defaultdict<BR>
-def dfs(graph,start,visited,path):<BR>
-  path.append(start)<BR>
-  visited[start]=True<BR>
-  for neighbour in graph[start]:<BR>
-    if visited[neighbour]==False:<BR>
-      dfs(graph,neighbour,visited,path)<BR>
-      visited[neighbour]=true<BR>
-  return path<BR>
-graph=defaultdict(list)<BR>
-n,e=map(int,input().split())<BR>
-#n=>Number of vertices,e=>number of edges<BR>
-for i in range(e):<BR>
-  u,v=map(str,input().split())<BR>
-  graph[u].append(v)<BR>
-  graph[v].append(u)<BR>
-#print(graph)<BR>
-start=input()<BR>
-visited=defaultdict(bool)<BR>
-path=[]<BR>
-transversedpath=dfs(graph,start,visited,path)<BR>
-
-<BR>print(transversedpath)<BR>
-
-
 <h3>Sample Input</h3>
-<hr>
 <hr>
 8 9 <BR>
 A B <BR>
@@ -98,7 +74,6 @@ F H <BR>
 <h3>Sample Output</h3>
 <hr>
 ['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
-
 
 <hr>
 
@@ -117,7 +92,7 @@ F H <BR>
 ['0', '1', '2', '3', '4']
 
 <hr>
-<h3>Result:</h3>
+<h3>Result :</h3>
 <hr>
 <p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
 
